@@ -3035,7 +3035,7 @@ ul {
 
 .work-together {
     padding: 220px 0px;
-    background: url(../img/workTogetherBg.jpg);
+    background: url(../img/turnkeyfooterimage.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3092,7 +3092,7 @@ ul {
 /* 20. Inner Page Banner css */
 
 .inner-page-banner {
-    background-image: url("../img/innerPageBannerBg.jpg"), linear-gradient(rgba(256, 256, 256, 0.9), rgba(256, 256, 256, 0.9));
+    background-image: url("../img/turnkeyfitout.png"), linear-gradient(rgba(256, 256, 256, 0.9), rgba(256, 256, 256, 0.9));
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
