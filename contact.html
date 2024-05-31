@@ -35,6 +35,23 @@
 </head>
 
 <body>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent default form submission
+          
+          // Get form data
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+          
+          // Construct WhatsApp link
+          const whatsappLink = `https://wa.me/919731951943?text=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+          
+          // Redirect to WhatsApp
+          window.location.href = whatsappLink;
+          
+        });
+      </script>
     <main class="about-us overflow-hidden">
         <!-- start preloader -->
         <div class="placeholder-cs">
@@ -75,9 +92,10 @@
                             <li>
                                 <a class="menu-link text-uppercase fw-500" href="services.html">Services</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="menu-link text-uppercase fw-500" href="portfolio.html">Portfolio</a>
-                            </li>
+                            </li> -->
+
                             <!-- <li>
                                 <a class="menu-link text-uppercase fw-500" href="blog.html">Blog</a>
                             </li> -->
@@ -151,13 +169,13 @@
                                                 </span>
                                             </div>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <div class="dropdownlink">
                                                 <span class="text-uppercase">
                                                     <a href="portfolio.html">Portfolio</a>
                                                 </span>
                                             </div>
-                                        </li>
+                                        </li> -->
                                         <!-- <li>
                                             <div class="dropdownlink">
                                                 <span class="text-uppercase">
@@ -226,7 +244,7 @@
                                                 </div>
                                                 <h4 class="dark-text fw-700 line-height-3 ">Address</h4>
                                                 <p class="p body-text fw-500 line-height-5">
-                                                    901 N Pitt Str., Suite 170 Alexandria, NY, USA
+                                                    Dubai
                                                 </p>
                                             </div>
                                         </div>
@@ -237,8 +255,8 @@
                                                 </div>
                                                 <h4 class="dark-text fw-700 line-height-3 ">Phone</h4>
                                                 <p class="p body-text fw-500 line-height-5">
-                                                    <a class="body-text" href="tel:(406) 555-0120">(406) 555-0120</a><br>
-                                                    <a class="body-text" href="tel:(406) 555-0120">(406) 555-0120</a>
+                                                    <a class="body-text" href="tel:(406) 555-0120">+971 50 100 3288</a><br>
+                                                    <!-- <a class="body-text" href="tel:(406) 555-0120">(406) 555-0120</a> -->
                                                 </p>
                                             </div>
                                         </div>
@@ -249,8 +267,8 @@
                                                 </div>
                                                 <h4 class="dark-text fw-700 line-height-3 ">Email</h4>
                                                 <p class="p body-text fw-500 line-height-5">
-                                                    <a class="body-text" href="mailto:archite@email.com">archite@email.com</a>
-                                                    <a class="body-text" href="mailto:hello@archite.com">hello@archite.com</a>
+                                                    <a class="body-text" href="mailto:archite@email.com">info@modernluxury-design.com</a>
+                                                    <!-- <a class="body-text" href="mailto:hello@archite.com">hello@archite.com</a> -->
                                                 </p>
                                             </div>
                                         </div>
@@ -258,19 +276,22 @@
                                     <div class="mt-100">
                                         <h4 class="contact-form-heading fw-700 line-height-3 dark-text mb-70">Drop Us a Message
                                         </h4>
-                                        <form class="contact-page-form">
+                                        <form  action="https://api.web3forms.com/submit" method="POST" class="contact-page-form">
+                                            <input type="hidden" name="access_key" value="0c46b98b-e03d-44f4-9b32-497e502a90aa">
                                             <div class="row mb-50">
                                                 <div class="col">
-                                                    <input type="text" class="form-control" placeholder="Name">
+                                                    <input type="text" name="name" class="form-control" placeholder="Name">
                                                 </div>
                                                 <div class="col">
-                                                    <input type="email" class="form-control" placeholder="Email">
+                                                    <input type="email" name="email" class="form-control" placeholder="Email">
                                                 </div>
                                             </div>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Messages" rows="3"></textarea>
-                                            <a class="btn brand-btn text-uppercase d-inline-block mt-60" href="contact.html">
-                                                <span class="position-relative z-1">send messages</span>
-                                            </a>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" name="message" placeholder="Message" rows="3"></textarea>
+                                            <button class="btn brand-btn text-uppercase d-inline-block mt-60" type="submit">Submit Form</button>
+                                            <!-- <a class="btn brand-btn text-uppercase d-inline-block mt-60" href=">
+                                                <span type="submit" class="position-relative z-1">send messages</span>
+                                            </a> -->
+                                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
                                         </form>
                                     </div>
                                 </div>
@@ -285,11 +306,11 @@
                 </section>
                 <!-- end contact -->
                 <!-- start map -->
-                <div class="contact-location-map">
+                <!-- <div class="contact-location-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387194.0622843894!2d-74.30932844391303!3d40.69701928424492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1683321107064!5m2!1sen!2sbd"
                         width="100" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-                </div>
+                </div> -->
                 <!-- end map -->
                 <!-- start footer -->
                 <footer class="footer-one">
