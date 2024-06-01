@@ -1256,7 +1256,8 @@ ul {
 /* 2. Header css */
 
 .logo-container .header-logo {
-    width: 90px;
+    width: 150px;
+    height: auto;
 }
 
 .offcanvas-body {
